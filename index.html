@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    div {
+      max-width: 1000px;
+      min-width: 600px;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <center>
+  <h1> Blind Estimation of Audio Processing Graph  </h1>
+    Sungho Lee, Jaehyun Park, Seungryeol Paik, and Kyogu Lee <br>
+    Department of Intelligence and Information, Seoul National University, Seoul, Republic of Korea <br>
+    <br>
+    <b>ABSTRACT</b>
+  </center>
+<br>
+Artificial reverberation (AR) models play a central role in various audio applications. 
+Therefore, estimating the AR model parameters (ARPs) of a reference reverberation is a crucial task.
+Although a few recent deep-learning-based approaches have shown promising performance, their non-end-to-end training scheme prevents them from fully exploiting the potential of deep neural networks.
+This motivates the introduction of differentiable artificial reverberation (DAR) models, allowing loss gradients to be back-propagated end-to-end. However, implementing the AR models with their difference equations “as is" in the deep learning framework severely bottlenecks the training speed when executed with a parallel processor like GPU due to their infinite impulse response (IIR) components.
+We tackle this problem by replacing the IIR filters with finite impulse response (FIR) approximations with the frequency-sampling method. 
+Using this technique, we implement three DAR models---differentiable Filtered Velvet Noise (FVN), Advanced Filtered Velvet Noise (AFVN), and Delay Network (DN).
+For each AR model, we train its ARP estimation networks for analysis-synthesis (RIR-to-ARP) and blind estimation (reverberant-speech-to-ARP) task in an end-to-end manner with its DAR model counterpart.
+Experiment results show that the proposed method achieves consistent performance improvement over the non-end-to-end approaches in both objective metrics and subjective listening test results. 
+ 
+</body>
+</html>
