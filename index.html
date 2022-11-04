@@ -6,33 +6,41 @@
       max-width: 1000px;
       min-width: 600px;
     }
-    table, th, td {
-      border: 1px solid black;
-    }
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Blind Estimation of Audio Processing Graph</title>
 </head>
 <body>
   <center>
   <h1> Blind Estimation of Audio Processing Graph  </h1>
-    Sungho Lee, Jaehyun Park, Seungryeol Paik, and Kyogu Lee <br>
-    Department of Intelligence and Information, Seoul National University, Seoul, Republic of Korea <br>
+  Sungho Lee<sup>1</sup>, Jaehyun Park<sup>1</sup>, Seungryeol Paik<sup>1</sup>, and Kyogu Lee<sup>1,2,3</sup> <br>
+  <sup>1</sup>Department of Intelligence and Information,
+  <sup>2</sup>Interdisciplinary Program in Artificial Intelligence,
+  <sup>3</sup>Artificial Intelligence Institute, Seoul National University. <br>
     <br>
+    <em>Submitted to ICASSP 2023 (under review).</em>
+    <br>
+    <br>
+    <table style="max-width:960px;">
+    <tr>
+	    <td>
     <b>Abstract</b>
     
-    Musicians and audio engineers sculpt and transform their sounds by connecting multiple processors, forming an \emph{audio processing graph}. 
+    Musicians and audio engineers sculpt and transform their sounds by connecting multiple processors, forming an <em>audio processing graph</em>. 
 However, most deep-learning methods overlook this real-world practice and assume fixed graph settings.
 To bridge this gap, we develop a system that reconstructs the entire graph from a given reference audio. 
 We first generate a realistic graph-reference pair dataset and train a simple blind estimation system composed of a convolutional reference encoder and a transformer-based graph decoder.
-We apply our framework to singing voice effects and drum mixing estimation tasks; evaluation results show that our method can reconstruct complex signal routings, including multi-band processing and sidechaining, and rendered signal from the estimated graphs processes is perceptually similar to the given reference.
-
-  </center>
+We apply our framework to singing voice effects and drum mixing estimation tasks; evaluation results show that our method can reconstruct complex signal routings, including multi-band processing and sidechaining.
+	    </td>
+</tr>
+    </table>
 <br>
-Samples: TBA
+  <h3> Audio Samples </h3>
+  <a href="singing.html">Singing Voice Effect Estimation</a><br>
+  <a href="drum.html">Drum Mixing Estimation</a><br>
 <br>
-Codes: TBA
+</center>
 </body>
 </html>

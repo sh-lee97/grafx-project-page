@@ -1,0 +1,113 @@
+<head>
+  <style>
+    div {
+      max-width: 1000px;
+      min-width: 600px;
+    }
+    table, td {
+      border: 1px solid grey;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Singing Voice Effect Estimation</title>
+</head>
+
+<center>
+  <h2> Audio Samples: Singing Voice Effect Estimation </h2>
+
+
+  &#9312; Autoencoding: we trained our decoder with another TokenGT-based graph decoder. <br>
+  &#9313; No latent contidioning: we trained our decoder with dummy zero latent vectors. <br><br>
+
+
+  <hr>
+  Results on <em>seen</em> speaker validation set <br><br>
+
+
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:1000px;">
+    <tr>
+      <th colspan="3"> Sample #1 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-Truth<br>
+      <img src="samples/seen-source-distribution/singing/dummy/gt.png-1.png" alt="gt-img" width=461><br>
+      <a href="samples/seen-source-distribution/singing/dummy/gt-full.png-1" style="color:black">full graph.</a><br>
+        <audio controls style="width: 260px;">
+	  <source src="samples/seen-source-distribution/singing/dummy/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9312; Autoencoding<br>
+	<a href="samples/seen-source-distribution/singing/dummy/autoencoding.png-2.png" style="color:black">prototype graph,</a>
+	<a href="samples/seen-source-distribution/singing/dummy/autoencoding-full.png-2.png" style="color:black">full graph.</a>
+	<br>
+	<audio controls style="width: 260px;">
+	  <source src="samples/seen-source-distribution/singing/dummy/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top">
+        &#9313; No latent contidioning<br>
+	<a href="samples/seen-source-distribution/singing/dummy/no-latent.png-2.png" style="color:black">prototype graph,</a>
+	<a href="samples/seen-source-distribution/singing/dummy/no-latent-full.png-2.png" style="color:black">full graph.</a>
+	<br>
+	<audio controls style="width: 260px;">
+	  <source src="samples/seen-source-distribution/singing/dummy/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top">
+      Dry source signal<br>(bypass graph)<br>
+	<audio controls style="width: 260px;">
+	  <source src="samples/seen-source-distribution/singing/dummy/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">&#9314; Estimation (Proposed: token-by-token, 2-stage)<br>
+      <img src="samples/seen-source-distribution/singing/dummy/gt.png-2.png" alt="pred-img" width=321><br>
+        <audio controls style="width: 260px;">
+	  <source src="samples/seen-source-distribution/singing/dummy/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Estimation (Node-by-node, 2-stage)<br>
+	<a href=".png" style="color:black">prototype graph,</a>
+	<a href=".png" style="color:black">full graph.</a>
+	<br>
+	<audio controls style="width: 260px;">
+	  <source src="samples/seen-source-distribution/singing/dummy/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top">
+        &#9316; Estimation (Token-by-token, 1-stage)<br>
+	<a href=".png" style="color:black">prototype graph,</a>
+	<a href=".png" style="color:black">full graph.</a>
+	<br>
+	<audio controls style="width: 260px;">
+	  <source src="samples/seen-source-distribution/singing/dummy/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top">
+        &#9317; Oracle source-conditioned<br>
+	<a href=".png" style="color:black">prototype graph,</a>
+	<a href=".png" style="color:black">full graph.</a>
+	<br>
+	<audio controls style="width: 260px;">
+	  <source src="samples/seen-source-distribution/singing/dummy/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+
+</center>
