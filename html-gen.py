@@ -4,7 +4,7 @@ import random
 import cv2
 from tqdm import tqdm
 
-def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, i: int):
+def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, k: int):
     def replace(line, task, sample_id, valid_set, j, max_width_ref=50, max_width_pred=50):
         TASK = 'Singing Voice Effect Estimation' if task == 'singing' else 'Drum Mixing Estimation'
         dry = 'speaker' if task == 'singing' else 'kit'
@@ -41,14 +41,12 @@ def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, i: in
 
         max_width_ref = ref_w/2800*800
         max_width_pred = pred_w/2800*800
-        #assert max_width_ref<100
-        #assert max_width_pred<100
 
         for i in range(len(samplelines)):
-            samplelines[i] = replace(samplelines[i], task, sample_id, valid_set, i*10+j, max_width_ref=max_width_ref, max_width_pred=max_width_pred)
+            samplelines[i] = replace(samplelines[i], task, sample_id, valid_set, k*10+j, max_width_ref=max_width_ref, max_width_pred=max_width_pred)
 
         f.writelines(samplelines)
-        j += 2
+        j += 1
 
     tail_f = open('tail.html', 'r')
     taillines = tail_f.readlines()
