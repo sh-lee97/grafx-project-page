@@ -17,6 +17,7 @@
   <h2> Audio Samples: Singing Voice Effect Estimation </h2>
   Results on <em>seen</em> speakers <br><br>
 
+  <small>
   &#9312; Autoencoding: graph decoder with another graph encoder. <br>
   &#9313; Unconditioned: graph decoder with dummy zero latents. <br>
   &#9314; Estimation (proposed: token, 2-stage): token-by-token decoding + 2-stage (categorical/continuous) decoding. <br>
@@ -24,6 +25,7 @@
   &#9316; Token, 1-stage: token-by-token decoding + single-stage autoregressive decoding. <br>
   &#9317; Oracle source: the proposed method &#9314; with dry source conditioned reference encoder. <br>
   Dry source: (sum of) dry source(s) without any processing. <br>
+  </small>
 
   <hr>
   <br>
@@ -35,44 +37,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/80_02/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/80_02/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/80_02/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/70_29/token-2stage.png-1.png" alt="gt-img" style="width:216; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/70_29/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_29/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/80_02/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/80_02/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/70_29/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/70_29/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_02/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_29/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/80_02/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/80_02/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/70_29/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/70_29/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_02/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_29/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_02/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_29/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/80_02/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/80_02/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/70_29/token-2stage.png-2.png" alt="pred-img" style="width:170; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_29/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -82,8 +84,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_02/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_29/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -91,8 +93,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_02/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_29/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -100,8 +102,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_02/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_29/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -118,44 +120,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/50_27/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/50_27/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/50_27/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/20_13/token-2stage.png-1.png" alt="gt-img" style="width:356; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/20_13/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_13/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/50_27/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/50_27/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/20_13/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/20_13/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/50_27/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_13/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/50_27/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/50_27/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/20_13/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/20_13/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/50_27/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_13/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/50_27/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_13/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/50_27/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/50_27/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/20_13/token-2stage.png-2.png" alt="pred-img" style="width:309; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_13/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -165,8 +167,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/50_27/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_13/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -174,8 +176,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/50_27/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_13/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -183,8 +185,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/50_27/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_13/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -201,44 +203,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/60_26/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/60_26/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/60_26/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/80_23/token-2stage.png-1.png" alt="gt-img" style="width:449; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/80_23/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/80_23/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/60_26/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/60_26/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/80_23/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/80_23/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/60_26/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/80_23/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/60_26/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/60_26/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/80_23/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/80_23/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/60_26/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/80_23/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/60_26/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/80_23/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/60_26/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/60_26/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/80_23/token-2stage.png-2.png" alt="pred-img" style="width:356; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/80_23/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -248,8 +250,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/60_26/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/80_23/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -257,8 +259,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/60_26/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/80_23/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -266,8 +268,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/60_26/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/80_23/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -284,44 +286,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/40_31/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/40_31/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/40_31/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/40_21/token-2stage.png-1.png" alt="gt-img" style="width:309; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/40_21/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/40_21/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/40_31/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/40_31/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/40_21/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/40_21/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/40_31/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/40_21/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/40_31/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/40_31/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/40_21/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/40_21/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/40_31/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/40_21/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/40_31/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/40_21/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/40_31/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/40_31/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/40_21/token-2stage.png-2.png" alt="pred-img" style="width:263; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/40_21/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -331,8 +333,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/40_31/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/40_21/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -340,8 +342,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/40_31/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/40_21/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -349,8 +351,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/40_31/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/40_21/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -367,9 +369,9 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/60_27/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <img src="../samples/seen-source-distribution/singing/60_27/token-2stage.png-1.png" alt="gt-img" style="width:356; max-width:100%"><br>
       <a href="../samples/seen-source-distribution/singing/60_27/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
+        <audio controls style="width: 260px" preload="none">
 	  <source src="../samples/seen-source-distribution/singing/60_27/ref.wav" type="audio/wav">
 	</audio>
       </td>
@@ -380,7 +382,7 @@
 	<a href="../samples/seen-source-distribution/singing/60_27/autoencoding.png-2.png" style="color:black">prototype,</a>
 	<a href="../samples/seen-source-distribution/singing/60_27/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
+	<audio controls style="width: 100%;" preload="none">
 	  <source src="../samples/seen-source-distribution/singing/60_27/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
@@ -389,21 +391,21 @@
 	<a href="../samples/seen-source-distribution/singing/60_27/no-latent.png-2.png" style="color:black">prototype,</a>
 	<a href="../samples/seen-source-distribution/singing/60_27/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
+	<audio controls style="width: 100%;" preload="none">
 	  <source src="../samples/seen-source-distribution/singing/60_27/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
+	<audio controls style="width: 100%;" preload="none">
 	  <source src="../samples/seen-source-distribution/singing/60_27/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/60_27/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
+    <img src="../samples/seen-source-distribution/singing/60_27/token-2stage.png-2.png" alt="pred-img" style="width:263; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
 	  <source src="../samples/seen-source-distribution/singing/60_27/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
@@ -414,7 +416,7 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
+	<audio controls style="width: 100%;" preload="none">
 	  <source src="../samples/seen-source-distribution/singing/60_27/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
@@ -423,7 +425,7 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
+	<audio controls style="width: 100%;" preload="none">
 	  <source src="../samples/seen-source-distribution/singing/60_27/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
@@ -432,7 +434,7 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
+	<audio controls style="width: 100%;" preload="none">
 	  <source src="../samples/seen-source-distribution/singing/60_27/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
@@ -450,44 +452,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/20_10/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/20_10/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/20_10/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/30_22/token-2stage.png-1.png" alt="gt-img" style="width:216; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/30_22/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/30_22/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/20_10/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/20_10/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/30_22/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/30_22/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_10/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/30_22/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/20_10/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/20_10/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/30_22/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/30_22/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_10/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/30_22/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_10/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/30_22/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/20_10/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/20_10/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/30_22/token-2stage.png-2.png" alt="pred-img" style="width:263; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/30_22/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -497,8 +499,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_10/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/30_22/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -506,8 +508,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_10/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/30_22/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -515,8 +517,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_10/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/30_22/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -533,44 +535,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/30_22/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/30_22/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/30_22/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/10_07/token-2stage.png-1.png" alt="gt-img" style="width:309; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/10_07/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/10_07/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/30_22/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/30_22/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/10_07/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/10_07/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/30_22/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/10_07/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/30_22/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/30_22/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/10_07/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/10_07/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/30_22/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/10_07/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/30_22/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/10_07/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/30_22/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/30_22/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/10_07/token-2stage.png-2.png" alt="pred-img" style="width:263; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/10_07/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -580,8 +582,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/30_22/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/10_07/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -589,8 +591,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/30_22/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/10_07/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -598,8 +600,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/30_22/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/10_07/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -616,44 +618,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/70_09/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/70_09/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/70_09/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/50_03/token-2stage.png-1.png" alt="gt-img" style="width:263; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/50_03/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/50_03/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/70_09/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/70_09/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/50_03/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/50_03/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/70_09/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/50_03/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/70_09/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/70_09/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/50_03/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/50_03/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/70_09/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/50_03/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/70_09/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/50_03/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/70_09/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/70_09/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/50_03/token-2stage.png-2.png" alt="pred-img" style="width:216; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/50_03/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -663,8 +665,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/70_09/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/50_03/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -672,8 +674,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/70_09/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/50_03/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -681,8 +683,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/70_09/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/50_03/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -699,44 +701,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/80_13/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/80_13/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/80_13/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/20_20/token-2stage.png-1.png" alt="gt-img" style="width:170; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/20_20/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_20/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/80_13/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/80_13/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/20_20/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/20_20/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_13/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_20/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/80_13/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/80_13/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/20_20/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/20_20/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_13/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_20/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_13/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_20/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/80_13/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/80_13/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/20_20/token-2stage.png-2.png" alt="pred-img" style="width:170; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_20/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -746,8 +748,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_13/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_20/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -755,8 +757,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_13/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_20/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -764,8 +766,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/80_13/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/20_20/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -782,44 +784,44 @@
     </tr>
     <tr>
       <td style="text-align: center;" colspan="3">Ground-truth<br>
-      <img src="../samples/seen-source-distribution/singing/20_30/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
-      <a href="../samples/seen-source-distribution/singing/20_30/token-2stage.pdf" style="color:black">full.</a><br>
-        <audio controls style="width: 260px%">
-	  <source src="../samples/seen-source-distribution/singing/20_30/ref.wav" type="audio/wav">
+      <img src="../samples/seen-source-distribution/singing/70_03/token-2stage.png-1.png" alt="gt-img" style="width:123; max-width:100%"><br>
+      <a href="../samples/seen-source-distribution/singing/70_03/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_03/ref.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
       <td style="text-align: center;" valign="top" width=33%>
         &#9312; Autoencoding<br>
-	<a href="../samples/seen-source-distribution/singing/20_30/autoencoding.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/20_30/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/70_03/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/70_03/autoencoding-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_30/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_03/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
         &#9313; Unconditioned<br>
-	<a href="../samples/seen-source-distribution/singing/20_30/no-latent.png-2.png" style="color:black">prototype,</a>
-	<a href="../samples/seen-source-distribution/singing/20_30/no-latent-full.png-2.png" style="color:black">full.</a>
+	<a href="../samples/seen-source-distribution/singing/70_03/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/seen-source-distribution/singing/70_03/no-latent-full.png-2.png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_30/no-latent.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_03/no-latent.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
       Dry source<br>(bypass graph)<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_30/dry.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_03/dry.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
     <tr>
     <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
-    <img src="../samples/seen-source-distribution/singing/20_30/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
-        <audio controls style="width: 260px;">
-	  <source src="../samples/seen-source-distribution/singing/20_30/token-2stage.wav" type="audio/wav">
+    <img src="../samples/seen-source-distribution/singing/70_03/token-2stage.png-2.png" alt="pred-img" style="width:170; max-width:100%"><br>
+        <audio controls style="width: 260px;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_03/token-2stage.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>
@@ -829,8 +831,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_30/node-2stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_03/node-2stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="34%">
@@ -838,8 +840,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_30/token-1stage.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_03/token-1stage.wav" type="audio/wav">
 	</audio>
       </td>
       <td style="text-align: center;" valign="top" width="33%">
@@ -847,8 +849,8 @@
 	<a href=".png" style="color:black">prototype,</a>
 	<a href=".png" style="color:black">full.</a>
 	<br>
-	<audio controls style="width: 100%;">
-	  <source src="../samples/seen-source-distribution/singing/20_30/autoencoding.wav" type="audio/wav">
+	<audio controls style="width: 100%;" preload="none">
+	  <source src="../samples/seen-source-distribution/singing/70_03/autoencoding.wav" type="audio/wav">
 	</audio>
       </td>
     </tr>

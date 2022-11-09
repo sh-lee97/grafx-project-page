@@ -1,9 +1,11 @@
 from glob import glob
 import os; opj = os.path.join
 import random
+import cv2
+from tqdm import tqdm
 
 def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, i: int):
-    def replace(line, task, sample_id, valid_set, j):
+    def replace(line, task, sample_id, valid_set, j, max_width_ref=50, max_width_pred=50):
         TASK = 'Singing Voice Effect Estimation' if task == 'singing' else 'Drum Mixing Estimation'
         dry = 'speaker' if task == 'singing' else 'kit'
         return line.replace('[TASK]', TASK)\
@@ -12,7 +14,9 @@ def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, i: in
                    .replace('[ID]', sample_id)\
                    .replace('[id]', str(j))\
                    .replace('[VALID-SET]', valid_set)\
-                   .replace('[EX]', f'{i*10+1}-{(i+1)*10}')
+                   .replace('[EX]', f'{i*10+1}-{(i+1)*10}')\
+                   .replace('[MAX-WIDTH-REF]', str(int(max_width_ref)))\
+                   .replace('[MAX-WIDTH-PRED]', str(int(max_width_pred)))
 
     f = open(html_dir, 'w')
 
@@ -23,11 +27,26 @@ def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, i: in
     f.writelines(headlines)
 
     j = 1
-    for sample_id in sample_ids:
+    for sample_id in tqdm(sample_ids):
         sample_f = open('sample.html', 'r')
         samplelines = sample_f.readlines()
+
+        folder = opj('samples', valid_set+'-source-distribution', task, sample_id)
+        ref_dir = opj(folder, 'token-2stage.png-1.png')
+        ref_img = cv2.imread(ref_dir)
+        ref_w = ref_img.shape[1]
+        pred_dir = opj(folder, 'token-2stage.png-2.png')
+        pred_img = cv2.imread(pred_dir)
+        pred_w = pred_img.shape[1]
+
+        max_width_ref = ref_w/2800*800
+        max_width_pred = pred_w/2800*800
+        #assert max_width_ref<100
+        #assert max_width_pred<100
+
         for i in range(len(samplelines)):
-            samplelines[i] = replace(samplelines[i], task, sample_id, valid_set, i*10+j)
+            samplelines[i] = replace(samplelines[i], task, sample_id, valid_set, i*10+j, max_width_ref=max_width_ref, max_width_pred=max_width_pred)
+
         f.writelines(samplelines)
         j += 2
 
@@ -38,6 +57,7 @@ def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, i: in
     f.writelines(taillines)
 
 if __name__ == '__main__':
+    random.seed(0)
     for task in ['singing', 'drum']:
         for valid_set in ['seen', 'unseen']:
             sample_dirs = glob(opj('samples', valid_set+'*', task, '*'))
