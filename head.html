@@ -1,0 +1,29 @@
+<head>
+  <style>
+    div {
+      max-width: 1000px;
+    }
+    table, td {
+      border: 1px solid grey;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[TASK] [EX]</title>
+</head>
+
+<center>
+  <h2> Audio Samples: [TASK] </h2>
+  Results on <em>[VALID-SET]</em> [DRY]s <br><br>
+
+  &#9312; Autoencoding: graph decoder with another graph encoder. <br>
+  &#9313; Unconditioned: graph decoder with dummy zero latents. <br>
+  &#9314; Estimation (proposed: token, 2-stage): token-by-token decoding + 2-stage (categorical/continuous) decoding. <br>
+  &#9315; Node, 2-stage: node-by-node decoding + 2-stage decoding. <br>
+  &#9316; Token, 1-stage: token-by-token decoding + single-stage autoregressive decoding. <br>
+  &#9317; Oracle source: the proposed method &#9314; with dry source conditioned reference encoder. <br>
+  Dry source: (sum of) dry source(s) without any processing. <br>
+
+  <hr>
+  <br>

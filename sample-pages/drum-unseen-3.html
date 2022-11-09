@@ -1,0 +1,860 @@
+<head>
+  <style>
+    div {
+      max-width: 1000px;
+    }
+    table, td {
+      border: 1px solid grey;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drum Mixing Estimation 121-130</title>
+</head>
+
+<center>
+  <h2> Audio Samples: Drum Mixing Estimation </h2>
+  Results on <em>unseen</em> kits <br><br>
+
+  &#9312; Autoencoding: graph decoder with another graph encoder. <br>
+  &#9313; Unconditioned: graph decoder with dummy zero latents. <br>
+  &#9314; Estimation (proposed: token, 2-stage): token-by-token decoding + 2-stage (categorical/continuous) decoding. <br>
+  &#9315; Node, 2-stage: node-by-node decoding + 2-stage decoding. <br>
+  &#9316; Token, 1-stage: token-by-token decoding + single-stage autoregressive decoding. <br>
+  &#9317; Oracle source: the proposed method &#9314; with dry source conditioned reference encoder. <br>
+  Dry source: (sum of) dry source(s) without any processing. <br>
+
+  <hr>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #41 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/60_21/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/60_21/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/60_21/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/60_21/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/60_21/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_21/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/60_21/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/60_21/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_21/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_21/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/60_21/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/60_21/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_21/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_21/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_21/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #43 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/10_01/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/10_01/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/10_01/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/10_01/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/10_01/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_01/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/10_01/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/10_01/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_01/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_01/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/10_01/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/10_01/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_01/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_01/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_01/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #45 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/40_27/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/40_27/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/40_27/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/40_27/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/40_27/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_27/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/40_27/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/40_27/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_27/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_27/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/40_27/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/40_27/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_27/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_27/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_27/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #47 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/10_22/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/10_22/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/10_22/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/10_22/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/10_22/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_22/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/10_22/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/10_22/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_22/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_22/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/10_22/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/10_22/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_22/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_22/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_22/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #49 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/10_16/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/10_16/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/10_16/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/10_16/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/10_16/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_16/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/10_16/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/10_16/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_16/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_16/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/10_16/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/10_16/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_16/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_16/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_16/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #51 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/10_06/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/10_06/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/10_06/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/10_06/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/10_06/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_06/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/10_06/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/10_06/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_06/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_06/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/10_06/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/10_06/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_06/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_06/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/10_06/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #53 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/50_17/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/50_17/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/50_17/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/50_17/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/50_17/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/50_17/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/50_17/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/50_17/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/50_17/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/50_17/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/50_17/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/50_17/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/50_17/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/50_17/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/50_17/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #55 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/40_20/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/40_20/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/40_20/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/40_20/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/40_20/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_20/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/40_20/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/40_20/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_20/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_20/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/40_20/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/40_20/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_20/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_20/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/40_20/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #57 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/60_19/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/60_19/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/60_19/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/60_19/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/60_19/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_19/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/60_19/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/60_19/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_19/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_19/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/60_19/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/60_19/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_19/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_19/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_19/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #59 </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/unseen-source-distribution/drum/60_31/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/unseen-source-distribution/drum/60_31/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/unseen-source-distribution/drum/60_31/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/unseen-source-distribution/drum/60_31/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/60_31/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_31/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/unseen-source-distribution/drum/60_31/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/unseen-source-distribution/drum/60_31/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_31/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_31/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/unseen-source-distribution/drum/60_31/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/unseen-source-distribution/drum/60_31/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_31/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_31/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/unseen-source-distribution/drum/60_31/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+</center>

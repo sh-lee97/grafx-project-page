@@ -1,0 +1,83 @@
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:800;" width="100%">
+    <tr>
+      <th colspan="3"> Sample #[id] </th>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="3">Ground-truth<br>
+      <img src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/token-2stage.png-1.png" alt="gt-img" style="max-width:600px;width:50%"><br>
+      <a href="../samples/[VALID-SET]-source-distribution/[task]/[ID]/token-2stage.pdf" style="color:black">full.</a><br>
+        <audio controls style="width: 260px%">
+	  <source src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/ref.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top" width=33%>
+        &#9312; Autoencoding<br>
+	<a href="../samples/[VALID-SET]-source-distribution/[task]/[ID]/autoencoding.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/[VALID-SET]-source-distribution/[task]/[ID]/autoencoding-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9313; Unconditioned<br>
+	<a href="../samples/[VALID-SET]-source-distribution/[task]/[ID]/no-latent.png-2.png" style="color:black">prototype,</a>
+	<a href="../samples/[VALID-SET]-source-distribution/[task]/[ID]/no-latent-full.png-2.png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/no-latent.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+      Dry source<br>(bypass graph)<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/dry.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;" colspan="3">&#9314; Estimation (proposed: token, 2-stage)<br>
+    <img src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/token-2stage.png-2.png" alt="pred-img" style="max-width:600px;width:50%"><br>
+        <audio controls style="width: 260px;">
+	  <source src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/token-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" valign="top">
+        &#9315; Node, 2-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/node-2stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="34%">
+        &#9316; Token, 1-stage<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/token-1stage.wav" type="audio/wav">
+	</audio>
+      </td>
+      <td style="text-align: center;" valign="top" width="33%">
+        &#9317; Oracle source<br>
+	<a href=".png" style="color:black">prototype,</a>
+	<a href=".png" style="color:black">full.</a>
+	<br>
+	<audio controls style="width: 100%;">
+	  <source src="../samples/[VALID-SET]-source-distribution/[task]/[ID]/autoencoding.wav" type="audio/wav">
+	</audio>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
