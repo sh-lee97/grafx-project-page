@@ -68,7 +68,33 @@ We apply our framework to singing voice effects and drum mixing estimation tasks
   <a href="sample-pages/drum-unseen-4.html">31-40</a>
   <a href="sample-pages/drum-unseen-5.html">41-50</a>
   <br>
+<hr>
+  <h3> Figures </h3>
+<center>
+    <table style="max-width:600px; border:0px;">
+    <tr>
+    <td style="max-width:600px; border:0px;">
+  <small>
+<center>
+<img src="blind-estimation.png" alt="blind-estimation" style="width:520px; max-width:100%">
+</center>
+<p class="small">
+The proposed blind estimation system. We first encode the stereo reference audio with a reference encoder. Then, we pass the latent vector into the prototype decoder, which autoregressively decodes the target graph's categorical variables (node types and edge types). Then, we pass the decoded prototype graph into a parameter estimator, which fills the remaining parameter attributes of nodes (processors) and edges (connections). The evaluation results show that this two-stage decoding (prototype decoding followed by the parameter estimation) performs better than the simple single-stage approach.
+</p>
 <br>
+<center>
+<img src="tokengt-framework.png" alt="tokengt-framework" style="width:560px; max-width:100%"><br>
+</center>
+<p class="small">
+The proposed prototype decoder and parameter estimator. These two modules are realized as a single transformer encoder model, which takes node tokens and edge tokens as input (the tokenized graph transformer approach). We concatenate i) the latent token from the reference encoder, ii) the task token to differentiate the two tasks, iii) an optional start-of-graph token for the autoregressive graph decoding, and iv) the prototype graph tokens. For the prototype decoding, we add a causal attention mask.
+</p>
+</center>
+  </small>
+  </td>
+  </tr>
+  </table>
+</center>
+<hr>
 </center>
 </body>
 </html>
