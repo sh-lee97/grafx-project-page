@@ -7,10 +7,12 @@ from tqdm import tqdm
 def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, k: int):
     def replace(line, task, sample_id, valid_set, j, max_width_ref=50, max_width_pred=50):
         TASK = 'Singing Voice Effect Estimation' if task == 'singing' else 'Drum Mixing Estimation'
-        dry = 'speaker' if task == 'singing' else 'kit'
+        DRY = 'speaker' if task == 'singing' else 'kit'
+        dry = 'x' if task == 'singing' else 'x.sum'
         return line.replace('[TASK]', TASK)\
                    .replace('[task]', task)\
-                   .replace('[DRY]', dry)\
+                   .replace('[DRY]', DRY)\
+                   .replace('[dry]', dry)\
                    .replace('[ID]', sample_id)\
                    .replace('[id]', str(j))\
                    .replace('[VALID-SET]', valid_set)\
@@ -55,7 +57,7 @@ def write_html(html_dir: str, task: str, sample_ids: list, valid_set: str, k: in
     f.writelines(taillines)
 
 if __name__ == '__main__':
-    random.seed(0)
+    random.seed(2)
     for task in ['singing', 'drum']:
         for valid_set in ['seen', 'unseen']:
             sample_dirs = glob(opj('samples', valid_set+'*', task, '*'))
