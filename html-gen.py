@@ -63,7 +63,7 @@ if __name__ == '__main__':
             sample_dirs = glob(opj('samples', valid_set+'*', task, '*'))
             sample_ids = [d.split('/')[-1] for d in sample_dirs]
             random.shuffle(sample_ids)
-            for i in range(5):
+            for i in range(4):
                 _sample_ids = sample_ids[i*10:(i+1)*10]
                 html_dir = f'sample-pages/{task}-{valid_set}-{i+1}.html'
                 write_html(html_dir, task, _sample_ids, valid_set, i)
